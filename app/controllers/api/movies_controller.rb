@@ -1,14 +1,10 @@
 class Api::MoviesController < ApplicationController
     # GET /movies
-    def index
+    def show
         @movies = Movie.all
         render json: @movies
     end
 
-      # GET /todos/:id
-    def show
-        json_response(@todo)
-    end
 
     # POST /movies
     def create
